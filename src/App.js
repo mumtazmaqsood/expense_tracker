@@ -14,7 +14,7 @@ import { AddTranscation } from './components/AddTranscation';
 function App() {
   return (
     <div className="App">
-      Testing Code
+      Testing Code from github
       <Header />
       <div className="container">
         <Balance />
