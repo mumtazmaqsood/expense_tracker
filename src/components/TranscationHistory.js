@@ -1,21 +1,20 @@
 
-import React from 'react'
+import React, { useContext } from 'react';
+import {GlobalContext} from '../context/GlobalState';
+import { Transcation } from './Transcation';
+
 
 export const TranscationHistory = () => {
+    const {transcations} = useContext(GlobalContext);
+    console.log(transcations)
     return (
         <div>
             <h3>Transcation History</h3>
             <ul className="list">
-                <li className="plus">
-                    Project1 Income
-                    <span>$1000</span>
-                    <button className="delete-btn">X</button>
-                </li>
-                <li className="minus">
-                    Project1 Salary
-                    <span>-$500</span>
-                    <button className="delete-btn">X</button>
-                </li>
+                { transcations.map( transcation => (
+                    <Transcation key={transcation.id} transcation = {transcation} />
+                ))   
+                }
             </ul>
         </div>
     )

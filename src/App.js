@@ -10,9 +10,11 @@ import {Balance} from './components/Balance';
 import { AccountSummary} from './components/AccountSummary';
 import { TranscationHistory } from './components/TranscationHistory';
 import { AddTranscation } from './components/AddTranscation';
+import { GlobalProvider } from './context/GlobalState';
 
 function App() {
   return (
+    <GlobalProvider>
     <div className="App">
       Testing Code from github
       <Header />
@@ -23,6 +25,7 @@ function App() {
         <AddTranscation/>
       </div>    
     </div>
+  </GlobalProvider>
   );
 }
 
