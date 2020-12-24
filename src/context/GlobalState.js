@@ -15,7 +15,7 @@ const intialState = {
 export const GlobalContext = createContext(intialState);
 
 export const GlobalProvider = ({children}) => {
-    const [state, dispatch] = useReducer(AppReducer, intialState);
+    const [state] = useReducer(AppReducer, intialState);
     return(
         <GlobalContext.Provider value = {
             {transcations : state.transcations}
