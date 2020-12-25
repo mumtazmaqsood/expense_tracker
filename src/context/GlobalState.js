@@ -15,10 +15,19 @@ const intialState = {
 export const GlobalContext = createContext(intialState);
 
 export const GlobalProvider = ({children}) => {
-    const [state] = useReducer(AppReducer, intialState);
+    const [state, dispatch] = useReducer(AppReducer, intialState);
+
+    function delTranscation(id) {
+        dispatch({
+            type: 'DELETE_TRANSCATION',
+            payload: id
+        });
+    }
+
     return(
         <GlobalContext.Provider value = {
-            {transcations : state.transcations}
+            {transcations : state.transcations,
+            delTranscation}
         }>
             {children}
     </GlobalContext.Provider>
