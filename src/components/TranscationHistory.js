@@ -6,7 +6,6 @@ import { Transcation } from './Transcation';
 
 export const TranscationHistory = () => {
     const {transcations} = useContext(GlobalContext);
-    console.log(transcations)
     return (
         <div>
             <h3>Transcation History</h3>

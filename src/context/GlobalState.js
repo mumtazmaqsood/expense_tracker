@@ -6,8 +6,8 @@ const intialState = {
     transcations : [
         {id:1, description:"Income1", transcationamount:5000},
         {id:2, description:"Expense1", transcationamount:-500},
-        {id:3, description:"Income2", transcationamount:2000},
-        {id:4, description:"Expense2", transcationamount:-200}
+        {id:3, description:"Income2", transcationamount:200},
+        {id:4, description:"Expense2", transcationamount:-1200}
     ]
 }
 
