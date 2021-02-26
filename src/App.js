@@ -12,11 +12,17 @@ import { TranscationHistory } from './components/TranscationHistory';
 import { AddTranscation } from './components/AddTranscation';
 import { GlobalProvider } from './context/GlobalState';
 
+import swDev from './swDev'
+
+
+
 function App() {
+  {swDev()}
   return (
     <GlobalProvider>
     <div className="App">
       Testing Code from github
+      
       <Header />
       <div className="container">
         <Balance />
