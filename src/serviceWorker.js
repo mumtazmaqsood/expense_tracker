@@ -3,11 +3,11 @@ export function register() {
     // console.log(`${process.env.PUBLIC_URL}/CustomSW.js`)
     navigator.serviceWorker
       .register(`${process.env.PUBLIC_URL}/service-worker.js`)
-      .then(function (registration) {
-        console.log("Registration successful, scope is:", registration.scope);
+      .then( (result) => {
+        console.log("Result:", result);
       })
-      .catch(function (error) {
-        console.log("Service worker registration failed, error:", error);
-      });
+      .catch( (err) => {
+        console.log("Error", err)
+      })
   }
 }
