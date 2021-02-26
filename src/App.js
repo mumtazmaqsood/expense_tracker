@@ -12,7 +12,7 @@ import { TranscationHistory } from './components/TranscationHistory';
 import { AddTranscation } from './components/AddTranscation';
 import { GlobalProvider } from './context/GlobalState';
 
-//import swDev from './swDev'
+import swDev from './swDev'
 
 
 
@@ -23,7 +23,7 @@ function App() {
       console.log("Result",result);
     })
   } */
-  //swDev();
+  swDev();
   return (
     <GlobalProvider>
     <div className="App">
