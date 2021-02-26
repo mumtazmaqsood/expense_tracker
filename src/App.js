@@ -17,7 +17,13 @@ import swDev from './swDev'
 
 
 function App() {
-  swDev()
+  /* if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('./sw.js')
+    .then((result)=>{
+      console.log("Result",result);
+    })
+  } */
+  swDev();
   return (
     <GlobalProvider>
     <div className="App">
