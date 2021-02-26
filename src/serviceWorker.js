@@ -1,11 +1,13 @@
-  
 export function register() {
-
-  let swDev = `${process.env.PUBLIC_URL}/service-worker.js`
-  navigator.serviceWorker.register(swDev).then((result) => {
-    console.log("Result", result);
-  })
+  if ("serviceWorker" in navigator) {
+    // console.log(`${process.env.PUBLIC_URL}/CustomSW.js`)
+    navigator.serviceWorker
+      .register(`${process.env.PUBLIC_URL}/service-worker.js`)
+      .then(function (registration) {
+        console.log("Registration successful, scope is:", registration.scope);
+      })
+      .catch(function (error) {
+        console.log("Service worker registration failed, error:", error);
+      });
+  }
 }
-
-
-
