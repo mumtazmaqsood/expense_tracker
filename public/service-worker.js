@@ -1,7 +1,7 @@
-console.log("service worker registered");
+//console.log("service worker registered");
 
 
-/* var CACHE_NAME = 'expense_tracker';
+var CACHE_NAME = 'expense_tracker';
 var urlsToCache = [
     '/',
     '/static/js/bundle.js',
@@ -10,7 +10,7 @@ var urlsToCache = [
 
 ];
 
-self.addEventListener('install', function (event) {
+this.addEventListener('install', function (event) {
     // Perform install steps
     event.waitUntil(
         caches.open(CACHE_NAME)
@@ -22,11 +22,11 @@ self.addEventListener('install', function (event) {
 })
 
 
-self.addEventListener('fetch', function (e) {
+this.addEventListener('fetch', function (e) {
     console.log('[ServiceWorker] Fetch', e.request.url);
     e.respondWith(
         caches.match(e.request).then(function (response) {
             return response || fetch(e.request);
         })
     );
-}); */
+});
