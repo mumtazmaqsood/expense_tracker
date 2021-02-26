@@ -17,7 +17,7 @@ import swDev from './swDev'
 
 
 function App() {
-  {swDev()}
+  swDev()
   return (
     <GlobalProvider>
     <div className="App">
