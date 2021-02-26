@@ -1,7 +1,7 @@
 console.log("service worker registered");
 
 
-var CACHE_NAME = 'expense_tracker';
+/* var CACHE_NAME = 'expense_tracker';
 var urlsToCache = [
     '/',
     '/static/js/bundle.js',
@@ -29,4 +29,4 @@ self.addEventListener('fetch', function (e) {
             return response || fetch(e.request);
         })
     );
-});
+}); */
